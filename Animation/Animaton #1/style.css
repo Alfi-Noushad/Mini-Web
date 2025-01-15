@@ -1,0 +1,47 @@
+body{
+  // background: linear-gradient(90deg, black, grey);
+  background-color: black;
+}
+.loading{
+  height: 50px;
+  width: 50px;
+  border: 6px solid aqua;
+  box-shadow: 0 0 8px aqua, 0 0 8px aqua inset;
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: 10;
+  
+  
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-delay: 1s;
+  animation-timing-function: ease-in-out;
+  animation-name: loading;
+  animation-play-state: running;
+ 
+}
+.loading:hover{
+    animation-play-state: paused;
+}
+
+@keyframes loading{
+    0%{
+      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);  
+      scale: 1;
+    }
+    33%{
+         transform: rotateX(180deg) rotateY(0deg) rotateZ(0deg);
+         scale: 2;
+    }
+    66%{
+         transform: rotateX(180deg) rotateY(180deg) rotateZ(0deg);
+         scale: 2;
+    }
+    100%{
+         transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+         scale: 1;
+    }
+}
