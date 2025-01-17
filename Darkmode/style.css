@@ -1,0 +1,56 @@
+:root{
+  --base-color: white;
+  --base-varient: #e8e9ed;
+  --text-color: #111528;
+}
+
+.darkmode{
+  --base-color: #070b1d;
+  --base-varient: #101425;
+  --text-color: white;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  padding: 25px;
+  min-height: 100vh;
+  background-color: var(--base-color);
+  color: var(--text-color);
+  font-family: Sans-Serif;
+  
+  
+}
+
+#switch{
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 50%;
+  background-color:  var(--base-varient);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+
+}
+
+#switch svg{
+  fill: grey;
+}
+ 
+#switch svg:last-child{
+  display: none;
+}
+.darkmode #switch svg:first-child{
+  display: none;
+}
+
+.darkmode #switch svg:last-child{
+  display: block;
+}
