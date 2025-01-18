@@ -1,0 +1,56 @@
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #6464d0;
+}
+.box{
+    height: 25rem;
+    width: 25rem;
+    /*border: 5px solid black;*/
+    position: relative;
+    cursor: pointer;
+    
+}
+.backg{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url("https://raw.githubusercontent.com/Avijit200318/Next-Level-Css/refs/heads/main/3d%20bird%20card%20animation/background.avif");
+    background-size: cover;
+    transition: 1s;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px;
+}
+.box:hover .backg{
+    transform: perspective(20px) rotateX(2deg) translateY(-50px);
+}
+.bird{
+    background-image: url(https://github.com/Avijit200318/Next-Level-Css/blob/main/3d%20bird%20card%20animation/bird1.png?raw=true);
+    background-size: 100%;
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    animation: birdanimation 0.2s linear infinite;
+    transition: 1s;
+    animation-play-state: paused;
+}
+.box:hover .bird{
+    animation-play-state: running;
+    transform: translateY(-200px) translateX(-10px);
+}
+@keyframes birdanimation{
+    from{
+        background-image: url("https://github.com/Avijit200318/Next-Level-Css/blob/main/3d%20bird%20card%20animation/bird1.png?raw=true");
+    }
+    to{
+        background-image: url("https://github.com/Avijit200318/Next-Level-Css/blob/main/3d%20bird%20card%20animation/bird2.png?raw=true");
+    }
+}
